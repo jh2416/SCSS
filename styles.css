@@ -1,16 +1,18 @@
 /*main-axis, cross-axis 개념 확실히
 justify-content -> main-axis : default
 align-items -> cross-axis : default에 수직*/
+
 .wrapper{ /*box의 부모, 항상 1차로 붙어있는것만 가능(wrapper)작성 전에는 body*/
     display: flex; /* inline-block이랑 같은 효과, default: row */
+    flex-direction: column; /*main-axis : column으로 변경*/
     justify-content: space-between; /*justify-content: main-axis기준으로 움직임*/
-    align-items: center; /*align-items: cross-axis기준으로 움직임*/
-    height: 50vh;
+    align-items: flex-end; /*align-items: cross-axis기준으로 움직임*/
+    height: 200vh;
 }
 
 .box {
     background-color: peru;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     color: white;
 }
