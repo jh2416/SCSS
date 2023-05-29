@@ -1,0 +1,11 @@
+.wrapper{ /*box의 부모, 항상 1차로 붙어있는것만 가능(wrapper)작성 전에는 body*/
+    display: flex; /* inline-block이랑 같은 효과 */
+    
+}
+
+.box {
+    background-color: peru;
+    width: 200px;
+    height: 200px;
+    color: white;
+}
