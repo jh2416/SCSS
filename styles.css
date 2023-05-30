@@ -3,12 +3,13 @@ justify-content -> main-axis : default
 align-items -> cross-axis : default에 수직*/
 
 .father {
-  /*box의 부모, 항상 1차로 붙어있는것만 가능(wrapper)작성 전에는 body*/
-  display: flex; /* inline-block이랑 같은 효과, default: row */
-  /*flex-direction: column; main-axis : column으로 변경*/
-  justify-content: space-around; /*justify-content: main-axis기준으로 움직임*/
-  /*align-items: flex-end; align-items: cross-axis기준으로 움직임*/
+  /*flexbox는 모든 박스를 일렬로 정리함*/
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
   height: 100vh;
+  flex-wrap: wrap-reverse; /*default: nowrap
+  wrap: 정해진 사이즈 유지*/
 }
 
 .child {
@@ -17,20 +18,8 @@ align-items -> cross-axis : default에 수직*/
   height: 200px;
   color: white;
   font-size: 50px;
+  /*안에 숫자를 가운데 정렬*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/*순서바꾸기: 0은 본인원래 위치, 1부터 list처럼 옆으로 밀림 */
-.child:nth-child(2) {
-  order: 1;
-}
-
-.child:nth-child(1) {
-  order: 2;
-}
-
-/*.child:nth-child(2) {
-  align-self: center;
-}
-얘네 둘은 father에 height가 있어야함
-.child:nth-child(3) {
-  align-self: flex-end;
-}*/
