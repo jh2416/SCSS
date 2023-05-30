@@ -2,17 +2,35 @@
 justify-content -> main-axis : default
 align-items -> cross-axis : default에 수직*/
 
-.wrapper{ /*box의 부모, 항상 1차로 붙어있는것만 가능(wrapper)작성 전에는 body*/
-    display: flex; /* inline-block이랑 같은 효과, default: row */
-    flex-direction: column; /*main-axis : column으로 변경*/
-    justify-content: space-between; /*justify-content: main-axis기준으로 움직임*/
-    align-items: flex-end; /*align-items: cross-axis기준으로 움직임*/
-    height: 200vh;
+.father {
+  /*box의 부모, 항상 1차로 붙어있는것만 가능(wrapper)작성 전에는 body*/
+  display: flex; /* inline-block이랑 같은 효과, default: row */
+  /*flex-direction: column; main-axis : column으로 변경*/
+  justify-content: space-around; /*justify-content: main-axis기준으로 움직임*/
+  /*align-items: flex-end; align-items: cross-axis기준으로 움직임*/
+  height: 100vh;
 }
 
-.box {
-    background-color: peru;
-    width: 200px;
-    height: 200px;
-    color: white;
+.child {
+  background-color: peru;
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-size: 50px;
 }
+/*순서바꾸기: 0은 본인원래 위치, 1부터 list처럼 옆으로 밀림 */
+.child:nth-child(2) {
+  order: 1;
+}
+
+.child:nth-child(1) {
+  order: 2;
+}
+
+/*.child:nth-child(2) {
+  align-self: center;
+}
+얘네 둘은 father에 height가 있어야함
+.child:nth-child(3) {
+  align-self: flex-end;
+}*/
