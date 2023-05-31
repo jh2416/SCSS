@@ -1,7 +1,11 @@
+/*flex처럼 grid도 father에서 일어남*/
 .father {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 250px 250px 250px; /*원하는만큼 columns적으면 됨, row도 있음*/
+  grid-template-rows: 100px 50px 300px;
+  column-gap: 10px;
+  row-gap: 10px;
+  gap: 10px; /*한번에 구분가능!*/
 }
 
 .child {
@@ -13,9 +17,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/*줄 사이 간격 주려면 이런식으로 개별적으로 다 해줘야함*/
-.child:nth-child(4) {
-  margin-top: 10px;
 }
