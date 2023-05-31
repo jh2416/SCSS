@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 200px; /*200px 200px 200px 200px == repeat(4, 200px) */
+  grid-template-rows: 100px repeat(2, 200px) 100px; /* == 100px 200px 200px 100px*/
+  grid-template-areas: /*layout 디자인, 각 class마다 grid-area로 이름 설정해줘야함*/
+    "header header header header" /*빈공간으로 두려면 . 만 써주면 됨*/
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer";
+}
+
+.header {
+  background-color: #2ecc71;
+  grid-area: header;
+}
+.content {
+  background-color: #3498db;
+  grid-area: content;
+}
+.nav {
+  background-color: #8e44ad;
+  grid-area: nav;
+}
+.footer {
+  background-color: #f39c12;
+  grid-area: footer;
+}
