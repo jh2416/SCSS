@@ -1,0 +1,21 @@
+.father {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.child {
+  flex-basis: 30%;
+  background-color: peru;
+  color: white;
+  font-size: 50px;
+  /*안에 숫자를 가운데 정렬*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*줄 사이 간격 주려면 이런식으로 개별적으로 다 해줘야함*/
+.child:nth-child(4) {
+  margin-top: 10px;
+}
