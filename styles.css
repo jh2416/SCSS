@@ -30,5 +30,5 @@ align-items -> cross-axis : default에 수직*/
 }
 
 .child:nth-child(2) {
-  flex-grow: 0;
+  flex-grow: 0; /*box 주변 공간을 가짐, 0이 default*/
 }
