@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  gap: 10px;
+  height: 50vh;
+  /*grid-template-columns: repeat(4, 1fr);
+  fr : 공간을 꽉채워서 씀 (grid안에서), 숫자 바꿔주면 비율도 바꿀 수 있음
+  grid-template-rows: repeat(4, 1fr); 높이를 지정하지 않으면 1fr = 0*/
+  grid-template:
+    "header header header header" 1fr
+    "content content content nav" 2fr
+    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr;
+  /*""뒤에 바로 적은건 높이, /뒤에 적은건 너비, 여기서 repeat는 사용 불가*/
+}
+
+.header {
+  background-color: #2ecc71;
+  grid-area: header;
+}
+.content {
+  background-color: #3498db;
+  grid-area: content;
+}
+.nav {
+  background-color: #8e44ad;
+  grid-area: nav;
+}
+.footer {
+  background-color: #f39c12;
+  grid-area: footer;
+}
