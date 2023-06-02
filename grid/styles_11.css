@@ -1,0 +1,17 @@
+.grid {
+  color: white;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(10, minmax(100px, 1fr));
+  /*minmax없이 1fr일때는 창 화면에 따라 크기바뀜, minmax있으면 박스 크기는 안바뀌고 좌우 스크롤바가 생김*/
+  grid-template-rows: repeat(4, 100px);
+  grid-auto-columns: 100px;
+}
+
+.item:nth-child(odd) {
+  background-color: #2ecc71;
+}
+
+.item:nth-child(even) {
+  background: #3498db;
+}
