@@ -1,0 +1,20 @@
+.grid {
+  color: white;
+  display: grid;
+  gap: 5px;
+  /*grid-template-columns: repeat(4, 100px);*/
+  grid-template-rows: repeat(4, 100px); /*grid-auto-rows: 100px; 있으면필요X*/
+  grid-auto-flow: column; /*column을 새로만들기, 순서도 바뀜*/
+  grid-auto-columns: 100px;
+}
+/*기존의 repeat(4, 100px)는 더 많은 div가 생길때 반응을 못함 -> grid-auto-rows추가*/
+
+/*align/justify/place-self: end; 각각 클래스별로 개별적으로 적용하기 -content로 하면 적용 안됨*/
+
+.item:nth-child(odd) {
+  background-color: #2ecc71;
+}
+
+.item:nth-child(even) {
+  background: #3498db;
+}
