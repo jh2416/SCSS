@@ -14,7 +14,6 @@ body {
   height: 100%;
   background-color: #e78c3d;
   color: #f55b02;
-  overflow: scroll;
 }
 .department--lists {
   padding: 20px;
@@ -118,7 +117,6 @@ body {
 .information__section {
   grid-column: 3 / 4;
   padding: 0 10px;
-  overflow: scroll;
   background-color: #f50e02;
 }
 .information__section__header {
